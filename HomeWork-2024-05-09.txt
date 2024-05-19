@@ -1,0 +1,65 @@
+0. Projects
+   00-portfolio - get some ideas, what do you want 
+   00-tic-tac-toe - 30.04.2024
+   01-is-it-a-prime-number - 30.04.2024
+   02-css-explanator - 30.04.2024
+   03-questionnaire - 8.05.2024
+   04-binary-guessing - 16.05.2024
+
+   Optional Projects:
+      - Canvas "Breakout Game"
+      - "Endless Dangers" - see the description below
+
+
+1. NodeJS.
+
+Example of reading from file synchronously:
+const txtInput = fs.readFileSync('text-to-read.txt','utf8');
+
+The first parameter is the file name, the second is encoding.
+The function fs.readFileSync() returns the text from the file.
+
+a) Read from the file chocolate.txt into a variable 
+b) Write the text from the variable on the console
+
+
+2. Use more-events.css and more-events.html
+
+        a) Create function showEvent, which shows in the output  statements like this
+           "This is a <event-type> event. Value = <value>"
+
+           The function should show the whole event on the console too.
+
+            For <event-type> use event propety "type",
+            for <value> use event.target property "value".
+
+        b) Add listeners that will run this function for the event "input" on userInp,
+                for the event "change" on userPass,
+                for the event "blur" on birthYearInp
+
+        c) Create function changeColor that exchanges class "blue" by class "red" 
+           of the target element if it has class "blue", and vice versa.
+
+        d) Add listeners that will run this function for the event "click" on 
+           btn and btn1
+
+3. reduce() inside map(). 
+
+   const numAr = [[-7.65, 1.8, 34.5, -0.44], [1023, 55, -3.45, 1.2, 0.2], 
+                  [0.01, 0.03, -0.05, 88.1, 0.2], [2034, 3.01], [166],
+                  [-166, -5.4, -76]]
+
+   Go over numAr elements and sum all their numbers. 
+   Create new array of these sums.
+
+4.   
+const foods = ['pizza','pasta','mac-and-cheese','falafel','hummus','jachnun','sabih']
+    const drinks = ['wine','beer','martini','water','wodka','tea','cola']
+
+    Create new array "meals", that will contain objects with properties 
+    "food" and "drink" , like [{food: 'pizza',drink: 'wine'},
+                               {food: 'pasta',drink: 'beer'},
+                               {food: 'mac-and-cheese', drink: 'martini'},
+                                ...]
+
+   

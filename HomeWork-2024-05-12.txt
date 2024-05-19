@@ -1,0 +1,76 @@
+CHALLENGEs are OPTIONAL
+
+00. Create directory panda/your_name/hw/hw-2024-05-12
+00. Create directory panda/your_name/projects/03-questionnaire etc.
+
+0. Projects
+   00-portfolio - get some ideas, what do you want 
+   00-tic-tac-toe - 30.04.2024
+   01-is-it-a-prime-number - 30.04.2024
+   02-css-explanator - 30.04.2024
+   03-questionnaire - 8.05.2024
+   04-binary-guessing - 16.05.2024
+
+   Optional Projects:
+      - Canvas "Breakout Game"
+      - "Endless Dangers" - see the description below
+
+
+1. Create element.
+   Use array:
+   const hexa = ['0','1','2','3','4','5','6','7','8','9'
+   ,'A','B','C','D','E','F']
+    Create 2 lines of numbers: decimal from 0 to 33,
+      and below their hexadecimal options.
+
+2. NodeJS 'fs' module.
+Google for the unknown functions (for example "nodejs fs mkdirSync")
+Create some input file.
+
+a) Read from the file input.txt into a variable 
+b) Write the text from the variable into new-text.txt
+c) Write the same text again into new-text.txt
+d) Check that the text appears only once in new-text.txt
+e) Write the text from the variable into text-again.txt
+f) Use fs.appendFileSync() to really append the text to text-again.txt
+g) Check that the text appears twice now in text-again.txt
+h) Now use function readdirSync() - what do you get?
+i) Check if dir named "new-dir" already exists. 
+j) If not create it using mkdirSync()
+k) Write new file into this dir
+
+3. CHALLENGE. Take the "interactive picture" files.
+
+    Make the padding, filter: blur() and background-color properties of 
+    the image change when the inputs change.
+
+    Treat them all by the same callback function.
+
+    Use style.setProperty() method to set CSS variable values.
+
+    Hints: a) document.documentElement.style.setProperty(`--${e.target.name}`, ...)
+
+           b) get "px" (unit name) from e.target.dataset.units
+
+4. Random colors + timer. In timers.js create new div and
+   a button that starts a timer and changes background colors randomly
+   for some time.
+
+  CHALLENGE: Make it to change pace one time or several time.
+
+5. Loop inside loop with prompts. Write a function "memorizeOrder" that gets 
+   as an argument some array that should be 
+   learnt by heart in accordance with the order of its members.
+
+   For example. The user have to learn by heart the order of the planets.
+   The function gets the array
+   planets = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune']
+
+   Example:
+   the program asks "Which planet is number 1?" 
+   It continues to ask the same question until the player says "Mercury".
+   Now the program asks "Which planet is number 2?" 
+   And continues to ask this question until the user says "Venus".
+
+   You may envelope the whole program in the outer loop that will 
+   repeat the whole process n times.

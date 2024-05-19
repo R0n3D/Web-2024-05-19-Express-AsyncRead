@@ -1,0 +1,183 @@
+:root {
+  --violet-dark: #532a7f;
+  --violet-light: #9634ff;
+  --violet-lightest: #dcbefb;
+}
+
+/*
+=============== 
+Song List
+===============
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-family: "B612", sans-serif;
+  background-color: var(--violet-dark);
+  color: #fff;
+  font-size: 16px;
+}
+
+h1 {
+  width: 100%;
+  padding-top: 0.5rem;
+  font-size: 3em;
+  text-align: center;
+  font-family: "Archivo", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 800px;
+}
+
+.mix {
+  padding: 0 3em;
+  margin: 0;
+  list-style: none;
+  border: 3px solid var(--clr-white);
+}
+
+.total {
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  padding-bottom: 1em;
+}
+.mix .song {
+  padding: 0.5em;
+  margin: 0.75em 0;
+  font-size: 1.25em;
+}
+
+.mix .song-number {
+  display: inline-block;
+  padding: 0.45em;
+  margin-right: 0.25em;
+  background-color: var(--violet-light);
+}
+
+buttons {
+  display: flex;
+}
+
+button.search {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  color: var(--violet-dark);
+  font-size: 1.25em;
+  align-self: center;
+  cursor: pointer;
+}
+
+button.search.outlined {
+  outline: 4px solid var(--violet-light);
+  outline-offset: 4px;
+}
+
+button.show-list {
+  margin: 2em 0;
+  width: 50%;
+  padding: 1em;
+  color: var(--violet-dark);
+  font-size: 1.25em;
+  align-self: center;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  .mix .song {
+    width: 50%;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  button.show-list {
+    width: 25%;
+    font-size: 1.5em;
+  }
+}
+
+.logo .blue {
+  color: var(--violet-light);
+}
+
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--violet-light);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  color: var(--violet-dark);
+  transform: rotate(90deg);
+}
+
+.links a:hover {
+  background: var(--violet-lightest);
+  color: var(--violet-light);
+  padding-left: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--violet-light);
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--violet-dark);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .mix .song.hide {
+    display: none;
+  }
+}

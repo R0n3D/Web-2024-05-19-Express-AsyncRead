@@ -1,0 +1,63 @@
+body {
+    font-size: 1.5rem;
+}
+
+main {
+    padding: 0 0 5rem 6rem;
+}
+
+button, input, select {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+.cities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+figure {
+    border: 1px solid grey;
+    border-radius: 5px;
+    max-width: 24ch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+figure > img {
+    max-width: 100%;
+}
+
+.israel {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.capital {
+    animation: blink-text 1.9s linear infinite;
+}
+
+@keyframes blink-text {
+    0% {
+        color: rgb(150, 5, 150);
+    }
+    50% {
+        color: rgb(224, 100, 33);
+    }
+    100% {
+        color: rgb(19, 23, 157);
+    }
+}
+
+.hide {
+    display: none;
+}

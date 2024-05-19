@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities | Test Example 02</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cities.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+        
+          <h1 class="logo">Test <span>Example</span> 02</h1>
+          
+          <nav class="site-nav">
+            <ul>
+              <li><a href="./index.html"><i class="fa fa-home site-nav--icon"></i>Home</a></li> 
+              <li><a href="./count.html"><i class="fas fa-calculator site-nav--icon"></i>Count</a></li>
+              <li><a href="./loops.html"><i class="fas fa-undo-alt site-nav--icon"></i>Loops</a></li>
+              <li><a href="./cities.html"><i class="fas fa-globe-americas site-nav--icon"></i>Cities</a></li>
+              <li><a href="./countries.html"><i class="far fa-flag site-nav--icon"></i>Countries</a></li>
+            </ul> 
+          </nav>
+          
+          <div class="menu-toggle">
+            <div class="hamburger"></div>
+          </div>
+          
+        </div>
+        
+    </header>
+    <!--MAIN STARTS HERE-->
+    <main>
+
+      <h2>Cities</h2>
+
+      <div class="searches">
+        <button id="all">show all</button>
+        <select id="select-by-country">
+          <option value="">--Choose a Country--</option>
+          <option value="Israel">Israel</option>
+          <option value="Brazil">Brazil</option>
+          <option value="Czechia">Czechia</option>
+          <option value="Japan">Japan</option>
+          <option value="Morocco">Morocco</option>
+          <option value="United Kingdom">United Kingdom</option>
+        </select>
+        <br>
+        <label for="first-letter">Search by first letter <i class="fa fa-search"></i>:
+          <input type="text" id="first-letter">
+        </label>
+        <br>
+        <label for="search-str">Search by string <i class="fa fa-search"></i>:
+          <input type="text" id="search-str">
+        </label>
+      </div>
+
+      <div class="cities">
+
+
+      </div>
+
+  </main>
+              
+    <script src="./js/script.js"></script>
+    <script src="./js/cities-list.js"></script>
+    <script src="./js/cities.js"></script>
+</body>
+</html>

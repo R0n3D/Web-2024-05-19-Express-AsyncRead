@@ -1,0 +1,96 @@
+1. Download NodeJS and install Next->Next->Next
+   
+   Odd number of main version number -> newest, but with bugs
+   Even number - stable version, use for production
+
+
+2. Download Git - for get Git Bash together 
+    with it
+
+3. Open terminal in VS Code or 
+   Git Bash separate Window and 
+    check that you've got NodeJS 
+    installed and it's version
+
+$ node -v
+v18.20.0
+
+4. create a program, for example, hello.js,
+get to it's directory and run it:
+
+$ cd nodejs
+$ node hello.js
+
+5. Create directory farm,
+   put there inside overview.html and product.html and
+   put there inside farm/data/data.json 
+
+   JSON - it's a text, specially formatted to be converted to 
+          some object. JavaScript Object Notation - רישום של אובייקט
+
+6. $ cd farm
+
+7. npm - node package manager
+ 
+ It was installed together with NodeJS.
+
+ Initialize the project:
+
+ $ npm init
+
+ This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (farm)
+version: (1.0.0)
+description: NodeJS Express beginner
+entry point: (index.js) farm.js
+test command:
+git repository:
+keywords:
+author: Natalie
+license: (ISC)
+About to write to C:\Users\natal\Desktop\b\Courses\IITC\FullStack_2024_03_20_Ashquelon_Carmiel\course\Web-2024-05-16-Express-AsyncRead\nodejs\farm\package.json:
+
+{
+  "name": "farm",
+  "version": "1.0.0",
+  "description": "NodeJS Express beginner",
+  "main": "farm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Natalie",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes)
+
+
+8. Now we've got new file package.json:
+
+
+{
+  "name": "farm",
+  "version": "1.0.0",
+  "description": "NodeJS Express beginner",
+  "main": "farm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Natalie",
+  "license": "ISC"
+}
+  
+
+  a) It's just text file - we could fix it manually 
+  b) If we want to change it - we should save it for backup
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Test Example 02</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+        
+          <h1 class="logo">Test <span>Example</span> 02</h1>
+          
+          <nav class="site-nav">
+              <ul>
+                <li><a href="./index.html"><i class="fa fa-home site-nav--icon"></i>Home</a></li> 
+                <li><a href="./count.html"><i class="fas fa-calculator site-nav--icon"></i>Count</a></li>
+                <li><a href="./loops.html"><i class="fas fa-undo-alt site-nav--icon"></i>Loops</a></li>
+                <li><a href="./cities.html"><i class="fas fa-globe-americas site-nav--icon"></i>Cities</a></li>
+                <li><a href="./countries.html"><i class="far fa-flag site-nav--icon"></i>Countries</a></li>
+              </ul> 
+          </nav>
+          
+          <div class="menu-toggle">
+            <div class="hamburger"></div>
+          </div>
+          
+        </div>
+        
+    </header>
+        
+    <main>
+        <section class="container">
+            <!-- title -->
+            <div class="title two-lang">
+              <h2><span class="blue">!</span>!<span class="blue">!</span>Good <span class="blue">Luck</span>!<span class="blue">!</span>!</h2>
+              <h2 dir="rtl"><span class="blue">!</span>!<span class="blue">!</span>ב<span class="blue">הצלחה</span>!<span class="blue">!</span>!</h2>
+              
+            </div>
+            <section class="instructions general">
+              <h3 class="eng">Exam Themes</h3>
+              <h3 class="heb" dir="rtl">הנושאים למבחן</h3>
+              <p class="eng">
+                  -- Arithmetics like: m = m * 5, n++, d**2,
+                     and for the strings - concatenation and template string<br>
+                  -- if-else constructs, comparisons. Ternary operator. <br>
+                  -- Using class interface classList with it's methods: 
+                     add, remove, replace, contains (no toggle).<br>
+                  -- Getting random member of an array using the formula
+                     Math.floor(Math.random * arr.length). <br>
+                  -- Creating usual and arrow functions. Hoisted and not hoisted.<br> 
+                  -- Calling functions from other functions. <br>
+                  -- Returning value from funciton. <br>
+                  -- Going with FOR or forEach loop over all the members of the array. <br>
+                  -- Using the same index for the parallel arrays of the same length. <br>
+                  -- Adding and removing elments from the array, using methods
+                     push(),pop(),shift(),unshift().<br>
+                  -- document.querySelector() (or document.getElementById())
+                     and document.body. <br>
+                  -- Global and local variables, scope. <br>
+                  -- Inputs. Changing Data Type to numeric if needed. <br>
+                  -- Using toLowerCase() or toUpperCase() to simplify comparisons. <br>
+                  -- Adding event listener to HTML elements for the events
+                     "click","input","change","mouseover" <br>
+                  -- Using existing named functions as callback functions
+                     and creating anonymous callback functions. <br>
+                  -- Changing element content by using it's innerText 
+                     or innerHTML property <br>
+                  -- All the steps of creating new element:
+                      document.createElement(),
+                      setting the new element's properties, like "src", id, 
+                      class, innerText, etc.,
+                      appending the new element to the parent element <br>
+                  -- Object and properties. Using property of an object that is 
+                     an array member <br>
+                  -- includes() for strings and for arrays
+              </p>
+              <p class="heb" dir="rtl">
+    
+                 -- פעולות חשבון כגון m = m * 5, n++, d**2, ועבור המחרוזות -
+                    concatenation (+) ו-template string (backticks)<br>
+                 -- מבנים של if-else , השוואות, האופרטור המשולש <br>
+                 -- שימוש בממשק הקלאסים classList והמתודות שלו: add, remove, replace, 
+                    contains (הפעם ללא toggle)
+                 -- קבלת איבר רנדומאלי מתוך מערך בשימוש בנוסחא
+                 Math.floor(Math.random * arr.length). <br>
+                 -- יצירת פונקציות רגילות ופונקציות חץ (סדר כתיבה נכון, hoisting) <br>
+                 -- קריאה לפונקציות מתוך פונקציות אחרות.<br>
+                 -- החזרת ערך מתוך פונקציה.<br>
+                 -- מעבר על כל איברי המערך בעזרת לולאת FOR. <br>
+                 -- שימוש באותו האינדקס עבור מערך מקביל בעל אותו האורך. <br>
+                 -- הוספה והוצאת איברים ממערך כאשר משתמשים במתודות
+                 push(),pop(),shift(),unshift(). <br>
+                 -- document.querySelector() (או document.getElementById())
+                 ו- document.body. <br>
+                 -- משתנים גלובאליים, לוקאליים (מקומיים), scope <br>
+                 -- Inputs. קלט. שינוי של סוג נתון (data type) אם צריך.<br>
+                 -- שימוש ב-toLowerCase() או toUpperCase() על מנת להקל על ההשוואות. <br>
+                 -- יצירת ליסטנרים עבור האלמנטים של HTML עבור האירועים 
+                 "click","input","change","mouseover". <br>
+                 -- שימוש בפונקציות קיימות בתור פונקציות callback
+                    ויצירת פונקציות callback אנונימיות.<br>
+                 -- שינוי תוכן של האלמנט בשימוש בתכונות innerText או innerHTML. <br>
+                 -- כל השלבים של יצירת אלמנט: document.createElement(),
+                    הקנאת תכונות חדשות כגון "src", id, 
+                    class, innerText, וצירוף לאלמנט ההורה. <br>
+                 -- אובייקט ותכונותיו (properties). פניה לתכונה של אובייקט
+                    כאשר הוא באותו זמן גם הינו איבר של מערך. <br>
+                 -- includes() עבור מערכים ומחרוזות
+                
+              </p>
+              <h3 class="eng">General Instructions</h3>
+              <h3 class="heb" dir="rtl">הוראות כלליות</h3>
+              <p class="eng">
+                  -- These missions are not exactly like in the test, but they're
+                     good for practicing for it
+                  -- Do not change HTML and CSS, just fill in the MISSIONS here
+                  in JS.<br>
+                  -- Pay attention that there are several possible solutions
+                  for each mission. <br>
+                  -- Clarification: during the test it's OK to ask the teacher 
+                  questions to understand the missions, or ask for technical help, 
+                  but is not OK to ask how to solve the missions.
+              </p>
+              <p class="heb" dir="rtl">
+    
+                 -- המשימות כאן הן לא בדיוק כמו במבחן, אבל הן טובות לתרגול
+                    עבור המבחן
+                 -- אל תשנו לא את 
+                 HTML
+                 ולא את
+                 CSS,
+                 צריך רק למלא את המשימות כאן ב
+                 JS.<br>
+                 -- שימו לב שלכל משימה תמיד יש כמה אפשרויות לפתרון.<br>
+                 
+                 -- הבהרה:
+                 בזמן המבחן זה בסדר לשאול את המורה כדי להבהיר את המשימות
+                 או לבקש עזרה טכנית, אמנם זה לא בסדר לבקש עזרה בפתרון.
+                
+              </p>
+              <h3 class="eng">What to do?</h3>
+              <h3 class="heb" dir="rtl">מה לעשות?</h3>
+              <p class="eng">
+                  -- Perform the missions for the pages "count.html","loops.html" and "cities.html".<br>
+                  -- The missions are written in "count.js","loops.js" and in "cities.js". <br>
+                  -- The BODY of each HTML here consists of two parts: of navigation 
+                     (&lt;nav&gt;) and of &lt;main&gt; - we're interested in the
+                     &lt;main&gt; part only. It is started with &lt;!-- MAIN STARTS HERE --&gt;.
+              </p>
+              <p class="heb" dir="rtl">
+    
+                
+                 -- בצעו את המשימות עבור העמודים 
+                 "count.html", "loops.html"
+                 ו-
+                 "cities.html". <br>
+                 -- המשימות כתובות ב-
+                 "count.js", "loops.js"
+                 וב-
+                 "cities.js".<br>
+                 
+                 -- הגוף של כל 
+                 HTML
+                 פה מורכב משני חלקים: התפריט והחלק העיקרי.
+                 אותנו מעניין רק החלק העיקרי, הוא מסומן על ידי
+                 &lt;!-- MAIN STARTS HERE --&gt;.
+              </p>
+              <h3 class="eng">How the APPs should look in the end</h3>
+              <h3 class="heb" dir="rtl">איך האפליקציות אמורות להיראות בסוף</h3>
+
+
+              
+            </section>
+          </section>
+
+          <div class="show">
+    
+            <h4>cities:</h4>
+            <img src="./img/cities-example-by-country.png" alt="">
+            <img src="./img/cities-example-first-letter.png" alt="">
+            <img src="./img/cities-example-search-ta.png" alt="">
+
+          </div>
+
+        </main>
+        
+    <script src="./js/script.js"></script>
+</body>
+</html>

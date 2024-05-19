@@ -1,0 +1,78 @@
+CHALLENGEs are OPTIONAL
+
+00. Create directory panda/your_name/hw/hw-2024-05-15
+00. Create directory panda/your_name/projects/05-string-games etc.
+
+0. Projects
+   00-portfolio - get some ideas, what do you want 
+   00-tic-tac-toe - 30.04.2024
+   01-is-it-a-prime-number - 30.04.2024
+   02-css-explanator - 30.04.2024
+   03-questionnaire - 8.05.2024
+   04-binary-guessing - 16.05.2024 - small groups
+   05-string-games - "fix the clock" and "random quote" parts - 16.05.2024
+
+   Optional Projects:
+      - Canvas "Breakout Game"
+      - "Endless Dangers" - see the description below
+      - "Dreidel"
+
+
+1. Start NodeJS practice "laptop-store" -
+   get it's files, create the directory 
+   laptop-store and inside "data" and "templates"
+   and put there the appropriate files.
+
+   Perform the steps from the Cookbook01-farm.txt
+
+2. Get test-example02 from test dir and prepare yourself 
+   to the test.
+
+3. CHALLENGE. Floyd triangle. 
+   Input: how many rows should contain the triangle.
+   The triangle should consist of sequential numbers.
+   For example, if the input is 5, the triangle:
+   1
+   2  3
+   4  5  6
+   7  8  9  10
+   11 12 13 14 15
+
+   Make it look pretty - with the right space amount 
+   between the numbers.
+
+4. CHALLENGE. FORTUNE WHEEL - SECOND MISSION (of 2)
+
+   (It has some problems - the letters eventually get too small)
+   
+   f. Make the text change it's direction while the wheel is spinning
+   and stop in the right direction
+
+   g. Take "responses" array, shuffle it with the "shuffle" function.
+
+      Example of shuffle() function ()
+
+      function shuffle (array) {
+
+         let currentIndex = array.length;
+         let temporaryValue, randomIndex;
+
+         // While there remain elements to shuffle...
+         while (0 !== currentIndex) {
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+         }
+
+         return array;
+
+      }
+   
+   h. On start and when "Renew the Wheel" is clicked - 
+   create the number of sectors as the number 
+   of statements in "responses" array

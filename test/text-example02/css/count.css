@@ -1,0 +1,27 @@
+
+button {
+    cursor: pointer;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    min-height: 10rem;
+    border: 10px double #E54B4B;
+}
+
+.violet {
+    background: purple;
+    color: white;
+}
+
+.aqua {
+    background: aqua;
+    color: navy;
+}
+
+.big {
+    font-size: 3rem;
+}
