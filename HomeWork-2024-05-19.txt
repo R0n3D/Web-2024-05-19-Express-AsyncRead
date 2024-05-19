@@ -1,7 +1,7 @@
 CHALLENGEs are OPTIONAL
 
 00. Create directory panda/your_name/hw/hw-2024-05-19
-00. Create directory panda/your_name/projects/05-string-games etc.
+00. Create directory panda/your_name/projects/06-nim etc.
 
 0. Projects
    00-portfolio - get some ideas, what do you want 
@@ -10,8 +10,7 @@ CHALLENGEs are OPTIONAL
    02-css-explanator - 30.04.2024
    03-questionnaire - 8.05.2024
    04-binary-guessing - 16.05.2024 - small groups
-   05-string-games - "fix the clock","random quote",
-       "palindrome" and "gematria" parts - 23.05.2024
+   05-string-games - "fix the clock","random quote" parts - 16.05.2024
    06-nim - 23.05.2024 - small groups
 
    Optional Projects:
@@ -30,11 +29,7 @@ CHALLENGEs are OPTIONAL
 
    Perform the steps from the Cookbook01-farm.txt
 
-2. Continue 05-string-games project - 
-   in addition to "fix the clock" and "random quote"
-      create "palindrome" and "gematria" parts
-
-3. Use memory-game-start files - use querySelectorAll,
+2. Use memory-game-start files - use querySelectorAll,
    forEach, etc. to make one round of the game.
    To flip the cards - use the example in the flip-card
    directory.
@@ -44,7 +39,7 @@ CHALLENGEs are OPTIONAL
    of cards, to make more than one round and to keep 
    the score.
 
-4. CHALLENGE. Interesting use of switch.
+3. CHALLENGE. Interesting use of switch.
    a) Check the interesting use of switch at
       switch-interesting-use.html and switch-interesting-use.js
 
@@ -58,5 +53,5 @@ CHALLENGEs are OPTIONAL
       
       Otherwise: Wrong input
 
-5. Very CHALLENGING CHALLENGE 
+4. Very CHALLENGING CHALLENGE 
    Create Pascal triangle of the given size

@@ -15,7 +15,8 @@
 $ node -v
 v18.20.0
 
-4. create a program, for example, hello.js,
+4. HOW TO RUN js in NodeJS Environment:
+create a program, for example, hello.js,
 get to it's directory and run it:
 
 $ cd nodejs
@@ -94,3 +95,122 @@ Is this OK? (yes)
   a) It's just text file - we could fix it manually 
   b) If we want to change it - we should save it for backup
 
+
+9. Install package "express"
+
+  $ cd farm
+  $ npm i express
+    (or
+      $ npm install express)
+
+10. Now we see inside package.json also property
+
+
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+
+  On what packages of what versions my program depends.
+
+11. We see also inside "farm" dir package-lock.json also
+    that contains all the versions of all the dependencies of
+    express and the dir "node-modules" which contains the
+    the installation of express and it's dependencies
+
+12. Create farm/farm.js:
+
+const express = require('express');
+
+let port = 3051;
+
+// Create the server of express.
+// Traditionally we call it "app".
+const app = express();
+
+app.get('/',(req,res) => {
+
+    res.send(`<h1>Sweet, Sweet Home of EXPRESS Server😀</h1>`)
+
+})
+
+app.get('/product',(req,res) => {
+
+    res.send(`<h1>Our farm has the best meat 🥩</h1>`)
+
+})
+
+
+app.listen(port,() => {
+
+    console.log(`Listening on the port ${port} ...`)
+
+})
+
+13. Run the server:
+
+   $ cd farm
+   $ node farm.js
+
+  The server shows in the terminal:
+
+  Listening on the port 3051 ...
+
+14. Now we can send requests from the browser:
+
+localhost:3051 - shows Sweet, Sweet Home of EXPRESS Server😀
+
+or
+
+127.0.0.1:3051
+
+or 
+
+localhost:3051/product - shows Our farm has the best meat 🥩
+
+15. Read data file and show it's content 
+using route "/data":
+
+const express = require('express');
+const fs = require('fs');
+
+let port = 3051;
+
+let dataJSON = fs.readFileSync('./data/data.json','utf-8');
+
+// Create the server of express.
+// Traditionally we call it "app".
+const app = express();
+
+app.get('/',(req,res) => {
+
+    res.send(`<h1>Sweet, Sweet Home of EXPRESS Server😀</h1>`)
+
+})
+
+app.get('/product',(req,res) => {
+
+    res.send(`<h1>Our farm has the best meat 🥩</h1>`)
+
+})
+
+// MISSION: create route to get /data and to send
+//    the whole dataJSON
+
+app.get('/data',(req,res) => {
+
+    res.send(dataJSON);
+
+})
+
+app.listen(port,() => {
+
+    console.log(`Listening on the port ${port} ...`)
+
+})
+
+16. To see the change, restart the server:
+
+Ctrl-C
+$ node farm.js
+
+17.
