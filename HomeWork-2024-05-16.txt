@@ -1,7 +1,7 @@
 CHALLENGEs are OPTIONAL
 
-00. Create directory panda/your_name/hw/hw-2024-05-15
-00. Create directory panda/your_name/projects/05-string-games etc.
+00. Create directory panda/your_name/hw/hw-2024-05-16
+00. Create directory panda/your_name/projects/06-nim etc.
 
 0. Projects
    00-portfolio - get some ideas, what do you want 
@@ -11,6 +11,7 @@ CHALLENGEs are OPTIONAL
    03-questionnaire - 8.05.2024
    04-binary-guessing - 16.05.2024 - small groups
    05-string-games - "fix the clock" and "random quote" parts - 16.05.2024
+   06-nim - 23.05.2024 - small groups
 
    Optional Projects:
       - Canvas "Breakout Game"

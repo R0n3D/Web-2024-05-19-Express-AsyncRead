@@ -1,0 +1,62 @@
+CHALLENGEs are OPTIONAL
+
+00. Create directory panda/your_name/hw/hw-2024-05-19
+00. Create directory panda/your_name/projects/05-string-games etc.
+
+0. Projects
+   00-portfolio - get some ideas, what do you want 
+   00-tic-tac-toe - 30.04.2024
+   01-is-it-a-prime-number - 30.04.2024
+   02-css-explanator - 30.04.2024
+   03-questionnaire - 8.05.2024
+   04-binary-guessing - 16.05.2024 - small groups
+   05-string-games - "fix the clock","random quote",
+       "palindrome" and "gematria" parts - 23.05.2024
+   06-nim - 23.05.2024 - small groups
+
+   Optional Projects:
+      - Canvas "Breakout Game"
+      - "Endless Dangers" - see the description below
+      - "Dreidel"
+      - "Memory Game" - see the beginning files and 
+          the example of how to flip card inside 
+          the "projects/optional/memory-game" dir
+
+
+1. Continue NodeJS practice "laptop-store" -
+   get it's files, create the directory 
+   laptop-store and inside "data" and "templates"
+   and put there the appropriate files.
+
+   Perform the steps from the Cookbook01-farm.txt
+
+2. Continue 05-string-games project - 
+   in addition to "fix the clock" and "random quote"
+      create "palindrome" and "gematria" parts
+
+3. Use memory-game-start files - use querySelectorAll,
+   forEach, etc. to make one round of the game.
+   To flip the cards - use the example in the flip-card
+   directory.
+
+   You could convert this exercise to a project 
+   memory-game - then be prepared to change the number 
+   of cards, to make more than one round and to keep 
+   the score.
+
+4. CHALLENGE. Interesting use of switch.
+   a) Check the interesting use of switch at
+      switch-interesting-use.html and switch-interesting-use.js
+
+   b) Now yourself use switch in the same way.
+      Create function that gets person's age and answers for somebody who is 
+      6 years old: You can study 
+      12 years old: You can study, work
+      17 years old: You can study, work, drive a car
+      18 years old: You can study, work, drive a car, drink alcohol
+      60 years old: You can study, work, drive a car, drink alcohol, study Kabbalah
+      
+      Otherwise: Wrong input
+
+5. Very CHALLENGING CHALLENGE 
+   Create Pascal triangle of the given size
