@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="question-set-container">
+        <button onclick="startQuiz('animalSet')">Animals</button>
+        <button onclick="startQuiz('foodSet')">Foods</button>
+        <button onclick="startQuiz('geographySet')">Geography</button>
+
+        <!-- Add more buttons for other question sets here -->
+    </div>
+    <div id="quiz-container">
+        <div class="question" style="display: none;">
+            <p class="text"></p>
+            <ul>
+                <li class="answ a0"><input type="radio" name="answers" value="" onclick="checkAnswer(this.value)"><span class="answer-text"></span></li>
+                <li class="answ a1"><input type="radio" name="answers" value="" onclick="checkAnswer(this.value)"><span class="answer-text"></span></li>
+                <li class="answ a2"><input type="radio" name="answers" value="" onclick="checkAnswer(this.value)"><span class="answer-text"></span></li>
+                <li class="answ a3"><input type="radio" name="answers" value="" onclick="checkAnswer(this.value)"><span class="answer-text"></span></li>
+            </ul>
+            <button onclick="skipQuestion()">Skip</button>
+        </div>
+    </div>
+    <div id="score-container">Score: 0</div>
+    <button onclick="resetQuiz()">Reset Quiz</button>
+    <script src = "animals.js"> </script>
+</body>
+</html>

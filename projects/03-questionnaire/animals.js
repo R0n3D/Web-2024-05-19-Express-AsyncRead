@@ -1,40 +1,9 @@
-/*
 
-    <div class="queston">
-        <p class="text"></p>
-        <ul>
-            <li class='answ a0'><input type="radio" name="answers">
-                <span class="answer-text"></span>
-            </li>
-            <li class='answ a1'><input type="radio" name="answers">
-                <span class="answer-text"></span>
-            </li>
-            <li class='answ a2'><input type="radio" name="answers">
-                <span class="answer-text"></span>
-            </li>
-            <li class='answ a3'><input type="radio" name="answers">
-                <span class="answer-text"></span>
-            </li>
-        
-        </ul>
-
-    </div>
-
-    // Place for the score
-    // Buttons: to skip a question, to stop the game ...
-
-*/
-
-
-// let q1 = `Does elephant is frightened by mice?
-//             a) Yes
-//             b) Sometimes
-//             c) Only in the Zoo
-//             d) No
-// `
-
+let currentQuestionSet = [];
+currentQuestionIndex = 0;
+let userScore = 0;
 const q1 = {
-
+    
     question: 'Does elephant is frightened by mice?',
     /* answers: {
         a: 'Yes',
@@ -56,28 +25,129 @@ const q2 = {
     answerImg: ''
 }
 const q3 = {
-
+    
     question: 'Who hunts at night?',
     answers: ['Lion','Lioness', 'Elefant',  'Mouse'],
     rightAnswer: 'Lioness',
     questionImg: '',
     answerImg: ''
 }
+const q4 = {
+    question: 'What is the most popular food in Israel?',
+    answers: ['Falafel', 'Sushi', 'Pizza', 'Burger'],
+    rightAnswer: 'Falafel',
+    questionImg: '',
+    answerImg: ''
+};
+const q5 = {
+    question: 'What is the most popular dessert in Israel?',
+    answers: ['Baklava', 'Ice Cream', 'Halva', 'Cheesecake'],
+    rightAnswer: 'Halva',
+    questionImg: '',
+    answerImg: ''
+};
+const q6 = {
+    question: 'What is a typical Israeli breakfast?',
+    answers: ['Shakshuka', 'Pancakes', 'Omelette', 'Waffles'],
+    rightAnswer: 'Shakshuka',
+    questionImg: '',
+    answerImg: ''
+};
+const q7 = {
+    question: 'What is the capital of France?',
+    answers: ['Paris', 'Berlin', 'Madrid', 'Rome'],
+    rightAnswer: 'Paris',
+    questionImg: '',
+    answerImg: ''
+};
+const q8 = {
+    question: 'Which is the largest ocean?',
+    answers: ['Atlantic', 'Indian', 'Arctic', 'Pacific'],
+    rightAnswer: 'Pacific',
+    questionImg: '',
+    answerImg: ''
+};
+const q9 = {
+    question: 'Which continent is known as the "Dark Continent"?',
+    answers: ['Africa', 'Asia', 'South America', 'Australia'],
+    rightAnswer: 'Africa',
+    questionImg: '',
+    answerImg: ''
+};
 
-const animalSet = [q1,q2,q3];
+const animalSet = [q1, q2, q3];
+const foodSet = [q4, q5, q6];
+const geographySet  = [q7, q8, q9];
 
+function startQuiz(questionSetName) {
+    switch (questionSetName) {
+        case 'animalSet':
+            currentQuestionSet = animalSet;
+            break;
+        case 'foodSet':
+            currentQuestionSet = foodSet;
+            break;
+            case 'geographySet':
+            currentQuestionSet = geographySet;
+            break;
+        default:
+            alert('Invalid question set!');
+            return;
+    }
 
-/* function createQuestionEl(q) {
-    // המעטפת של כל השאלה
-    const newDiv = document.createElement('div');
-    document.append(newDiv);
-    // we've prepared class styled .question in CSS
-    newDiv.classList.add('question');
+    userScore = 0;
+    currentQuestionIndex = 0;
+    document.getElementById('question-set-container').style.display = 'none';
+    document.querySelector('.question').style.display = 'block';
+    displayQuestion();
+}
 
-    // טקסט השאלה
-    const qDiv = document.createElement('div');
-    qDiv.innerText = q.question;
-    newDiv.append(qDiv);
+function displayQuestion() {
+    
+    const questionContainer = document.querySelector('.question');
+    const questionText = questionContainer.querySelector('.text');
+    const answerOptions = questionContainer.querySelectorAll('.answ');
+    const scoreContainer = document.getElementById('score-container');
 
-    // תשובות
-    q.answers.forEach((ans,)) */
+    if (currentQuestionIndex < currentQuestionSet.length) {
+        const question = currentQuestionSet[currentQuestionIndex];
+
+        // Update the question text
+        questionText.textContent = question.question;
+
+        // Update the answer choices
+        answerOptions.forEach((option, index) => {
+            const answerText = option.querySelector('.answer-text');
+            const answerInput = option.querySelector('input[type="radio"]');
+
+            answerText.textContent = question.answers[index];
+            answerInput.value = question.answers[index];
+            answerInput.checked =false;
+        });
+        scoreContainer.textContent = `Score: ${userScore}`; // Display the current score
+    } else {
+        questionContainer.innerHTML = `You have completed the quiz with the score of ${userScore}!`;
+    }
+}
+
+ 
+
+    function checkAnswer(selectedAnswer) {
+        const currentQuestion = currentQuestionSet[currentQuestionIndex];
+        if (selectedAnswer === currentQuestion.rightAnswer) {
+            userScore++;
+        }
+        currentQuestionIndex++;
+        displayQuestion();
+    }
+
+    function skipQuestion() {
+        currentQuestionIndex++;
+        displayQuestion();
+    }
+
+    function resetQuiz() {
+        userScore = 0;
+        currentQuestionIndex = 0;
+        displayQuestion();
+    }
