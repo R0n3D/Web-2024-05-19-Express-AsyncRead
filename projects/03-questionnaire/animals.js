@@ -5,12 +5,6 @@ let userScore = 0;
 const q1 = {
     
     question: 'Does elephant is frightened by mice?',
-    /* answers: {
-        a: 'Yes',
-        b: 'Sometimes',
-        c: 'Only in the Zoo',
-        d: 'No'
-    } */
     answers: ['Yes','Sometimes', 'Only in the Zoo',  'No'],
     rightAnswer: 'Yes',
     questionImg: './img/elefant.gif',
@@ -87,7 +81,7 @@ function startQuiz(questionSetName) {
         case 'foodSet':
             currentQuestionSet = foodSet;
             break;
-            case 'geographySet':
+        case 'geographySet':
             currentQuestionSet = geographySet;
             break;
         default:
@@ -98,18 +92,31 @@ function startQuiz(questionSetName) {
     userScore = 0;
     currentQuestionIndex = 0;
     document.getElementById('question-set-container').style.display = 'none';
-    document.querySelector('.question').style.display = 'block';
+
+    const questionContainer = document.querySelector('.question');
+    const questionText = questionContainer.querySelector('.text');
+    const answerOptions = questionContainer.querySelectorAll('.answ');
+
+    // Clear the previous question and answer options
+    //questionText.textContent = '';
+    answerOptions.forEach(option => {
+        const answerText = option.querySelector('.answer-text');
+        answerText.textContent = '';
+    });
+
+    questionContainer.style.display = 'block';
     displayQuestion();
 }
-
 function displayQuestion() {
-    
     const questionContainer = document.querySelector('.question');
     const questionText = questionContainer.querySelector('.text');
     const answerOptions = questionContainer.querySelectorAll('.answ');
     const scoreContainer = document.getElementById('score-container');
 
-    if (currentQuestionIndex < currentQuestionSet.length) {
+    if (currentQuestionSet.length === 0) {
+        questionContainer.style.display = 'none';
+        scoreContainer.textContent = 'Score: 0';
+    } else if (currentQuestionIndex < currentQuestionSet.length) {
         const question = currentQuestionSet[currentQuestionIndex];
 
         // Update the question text
@@ -122,9 +129,9 @@ function displayQuestion() {
 
             answerText.textContent = question.answers[index];
             answerInput.value = question.answers[index];
-            answerInput.checked =false;
+            answerInput.checked = false;
+            scoreContainer.textContent = `Score: ${userScore}`; // Display the current score
         });
-        scoreContainer.textContent = `Score: ${userScore}`; // Display the current score
     } else {
         questionContainer.innerHTML = `You have completed the quiz with the score of ${userScore}!`;
     }
@@ -149,5 +156,9 @@ function displayQuestion() {
     function resetQuiz() {
         userScore = 0;
         currentQuestionIndex = 0;
-        displayQuestion();
+        currentQuestionSet = [];
+        document.getElementById('question-set-container').style.display = 'block';
+        document.querySelector('.question').style.display = 'none';
+        const scoreContainer = document.getElementById('score-container');
+        scoreContainer.textContent = '';
     }
